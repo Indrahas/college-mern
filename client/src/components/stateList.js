@@ -7,7 +7,7 @@ function StateList(){
     var [loading,setLoading]=useState(true);
     var index=0;
     useEffect(()=>{
-        axios.get("http://localhost:5000/states/"+state).then(res=>{
+        axios.get("/states/"+state).then(res=>{
             console.log(res.data)
             setColleges(res.data)
             setLoading(false)

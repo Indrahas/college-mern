@@ -11,7 +11,7 @@ function CollegeDetails(){
     var [loading,setLoading]=useState(true);
     useEffect(()=>{
         
-        axios.get("http://localhost:5000/college/"+id).then(res=>{
+        axios.get("/college/"+id).then(res=>{
             if(!res.data.college){
                     history.push("/error")
             }

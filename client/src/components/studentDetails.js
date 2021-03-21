@@ -10,7 +10,7 @@ function StudentDetails(){
     var [loading,setLoading]=useState(true);
     useEffect(()=>{
         
-        axios.get("http://localhost:5000/student/"+id).then(res=>{
+        axios.get("/student/"+id).then(res=>{
             console.log(res.data)
 
             setStudent(res.data)

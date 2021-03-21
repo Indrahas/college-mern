@@ -19,7 +19,7 @@ history.push("/college/"+college)
 
 }
 else{
-axios.get("http://localhost:5000/collegen/"+college)
+axios.get("/collegen/"+college)
 .then(res=>{
     // console.log(res)
     history.push("/college/"+res.data[0]._id)

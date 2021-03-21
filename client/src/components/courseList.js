@@ -7,7 +7,7 @@ function CourseList(){
     var [loading,setLoading]=useState(true);
     var index=0;
     useEffect(()=>{
-        axios.get("http://localhost:5000/courses/"+course).then(res=>{
+        axios.get("/courses/"+course).then(res=>{
             console.log(res.data)
             setColleges(res.data)
             setLoading(false)
