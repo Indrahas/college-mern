@@ -24,8 +24,8 @@ else{
 mongoose.connect(process.env.MONGO_URI,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
 .then(()=>{
     console.log("Connection to the database is successfull")
-    app.listen(5000,()=>{
-        console.log("Server is listening on port 5000")
+    app.listen(process.env.PORT,()=>{
+        console.log("Server is listening on port "+process.env.PORT)
     })
 })
 .catch(()=>console.log("Connection to database is unsuccessful"))
